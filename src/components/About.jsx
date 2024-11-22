@@ -7,18 +7,21 @@ const About = () => {
   const cardRef = useRef(null);
   let cardNumber = 1;
   const [width, setWidth] = useState(0);
-  const [stopSlide, setStopSlide] = useState(1);
 
   const rightBtn = () => {
     if (cardRef.current) {
       setWidth((i) => (i += cardRef.current.offsetWidth));
     }
-    setStopSlide((aboutInfo.length - cardNumber) * cardRef.current.offsetWidth);
   };
 
   const disableTouch = (e) => {
     e.preventDefault();
   };
+  console.log(width);
+
+  if (width >= 4410) {
+    setWidth(0);
+  }
 
   return (
     <div
@@ -48,7 +51,7 @@ const About = () => {
           onTouchStart={disableTouch}
           onTouchMove={disableTouch}
           onTouchEnd={disableTouch}
-          className={`grid grid-flow-col auto-cols-[100%] justify-between overflow-x-auto`}
+          className={`grid touch-none overflow-hidden grid-flow-col auto-cols-[100%] justify-between overflow-x-auto`}
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -59,7 +62,7 @@ const About = () => {
               <li
                 key={idx}
                 style={{ transform: `translateX(-${width}px)` }}
-                className="transition-transform duration-500"
+                className="touch-none transition-transform duration-500"
                 ref={cardRef}
               >
                 <h3 className={`${style.h3} mb-5`}>{i.title}</h3>
@@ -70,7 +73,6 @@ const About = () => {
         </ul>
         <button
           onClick={rightBtn}
-          disabled={width >= stopSlide}
           className={`text-blue cursor-pointer transition hover:scale-105 active:scale-100 font-[700] ${style.f} gap-2 sm:text-[1rem] text-[14px]`}
         >
           <span>Book 30 Minutes FREE Consultation</span>
