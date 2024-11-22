@@ -30,12 +30,10 @@ const Head = () => {
           </button>
         </div>
       </div>
-      <div className={`xl:w-[45%] w-full ${style.f} justify-end relative`}>
-        <img
-          className="xl:w-[85%] lg:!h-full w-full z-10"
-          src={HeadImg}
-          alt=""
-        />
+      <div
+        className={`xl:w-[45%] w-full ${style.f} xl:justify-end flex-col justify-center items-center relative`}
+      >
+        <img className="xl:w-[85%] md:w-[70%] sm:h-[300px] xl:h-auto w-full z-10 object-cover" src={HeadImg} alt="" />
         <div className={`${style.fCol} absolute left-0 bottom-20 z-0`}>
           {sum.map((item, idx) => {
             return (

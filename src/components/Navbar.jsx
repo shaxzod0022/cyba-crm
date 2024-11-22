@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full navbar-box-shadow bg-white fixed ${style.fB} gap-3 ${style.containerComponent} max-w-[1440px] z-50`}
+      className={`w-full navbar-box-shadow bg-white fixed ${style.fB} gap-3 ${style.containerComponent} max-w-[1536px] z-50`}
     >
       <a href="/">
         <img className="max-w-[185px] sm:w-full w-[120px]" src={Logo} alt="" />

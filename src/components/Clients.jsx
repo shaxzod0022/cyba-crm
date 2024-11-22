@@ -64,16 +64,16 @@ const Clients = () => {
               style={{ transform: `translateX(-${width}px)` }}
               className={`${style.fCol} cursor-pointer rounded-md md:w-[full] w-full border-[2px] transition-transform duration-500 p-5 sm:p-10 md:p-10 items-start gap-7`}
             >
-              <img src={userInfoTop} alt="" />
-              <p className={`${style.p} !text-priceBlack !text-[20px]`}>
+              <img src={userInfoTop} className="md:w-auto w-[50px]" alt="" />
+              <p className={`${style.p} !text-priceBlack`}>
                 {i.title}
               </p>
-              <span className={`${style.span} !text-[18px]`}>{i.info}</span>
+              <span className={`${style.span}`}>{i.info}</span>
               <div className={`${style.f} gap-3`}>
                 <img src={i.userImg} alt="" />
                 <div className={`${style.fCol}`}>
-                  <p className={`${style.p} !text-[18px]`}>{i.fulName}</p>
-                  <span className={`${style.span} !text-[16px]`}>{i.sity}</span>
+                  <p className={`${style.p}`}>{i.fulName}</p>
+                  <span className={`${style.span}`}>{i.sity}</span>
                 </div>
               </div>
             </li>

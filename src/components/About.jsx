@@ -26,9 +26,11 @@ const About = () => {
       id="about"
       className={`${style.containerComponent} ${style.fB} xl:flex-row flex-col-reverse gap-4 md:!py-30 xl:!py-40 py-20`}
     >
-      <div className={`xl:w-[48%] w-full`}>
+      <div
+        className={`xl:w-[48%] w-full ${style.fCol} items-center justify-center`}
+      >
         <div
-          className={`sm:rounded-[50px] rounded-[40px] p-2 w-full border-img`}
+          className={`max-w-[450px]  sm:rounded-[50px] rounded-[40px] p-2 w-full border-img`}
         >
           <img className="w-full h-full" src={AboutImg} alt="" />
         </div>

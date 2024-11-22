@@ -5,7 +5,10 @@ const Features = () => {
   const [hover, setHover] = useState(null);
 
   return (
-    <div id="features" className={`${style.containerComponent} ${style.fCol} items-center`}>
+    <div
+      id="features"
+      className={`${style.containerComponent} ${style.fCol} items-center`}
+    >
       <span className={`${style.span} font-bold`}>What we offer</span>
       <h2 className={`${style.h2} sm:mb-14 md:mb-18 mb-10`}>
         Features & <span className="!text-blue">Services</span>
@@ -19,13 +22,13 @@ const Features = () => {
               key={idx}
               className={`${style.fCol} ${
                 hover === i.id ? "bg-blue" : "bg-white"
-              } items-start border-img lg:p-10 p-5 cursor-pointer rounded-[40px] max-w-[400px] md:w-[45%] lg:w-full transition duration-150`}
+              } items-start border-img lg:p-10 p-5 cursor-pointer rounded-[40px] max-w-[380px] md:w-[45%] lg:w-full transition duration-150`}
             >
               <div
-                className={`${style.fCol} items-center justify-center rounded-xl bg-white max-w-[130px] mb-4 sm:w-full md:w-[110px] lg:w-full w-[80px] max-h-[130px] sm:h-full md:h-[110px] lg:h-full h-[80px]`}
+                className={`${style.fCol} items-center justify-center rounded-xl bg-white p-1 max-w-[90px]  md:mb-4 sm:mb-2 mb-1 sm:w-[70px] lg:w-full w-[50px] max-h-[90px] sm:h-[70px] lg:h-full h-[50px]`}
               >
                 <img
-                  className="max-w-[110px] mb-4 sm:w-full md:w-[90px] lg:w-full w-[60px]"
+                  className="max-w-[80px] sm:w-[60px] lg:w-full w-[40px]"
                   src={i.img}
                   alt=""
                 />
@@ -41,7 +44,7 @@ const Features = () => {
               <span
                 className={`${style.span} ${
                   hover === i.id ? "!text-white" : ""
-                } md:mb-16 mb-10 transition duration-150`}
+                } lg:mb-16 md:mb-10 mb-5 transition duration-150`}
               >
                 {i.info}
               </span>

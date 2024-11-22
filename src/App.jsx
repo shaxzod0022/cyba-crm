@@ -17,7 +17,7 @@ import { BrowserRouter } from "react-router";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="max-w-[1440px] mx-auto navbar-box-shadow">
+      <div className="max-w-[1536px] mx-auto">
         <Navbar />
         <Head />
         <About />

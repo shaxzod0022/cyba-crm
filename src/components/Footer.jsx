@@ -46,7 +46,7 @@ const Footer = () => {
           return (
             <li
               key={idx}
-              className={`${style.fCol} items-center justify-center hover:scale-105 active:scale-100 transition duration-150 bg-blue w-[45px] h-[45px] cursor-pointer rounded-md`}
+              className={`${style.fCol} items-center justify-center hover:scale-105 active:scale-100 transition duration-150 bg-blue w-[35px] h-[35px] cursor-pointer rounded-md`}
             >
               <img src={i.img} alt="" />
             </li>
