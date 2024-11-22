@@ -5,7 +5,6 @@ import { aboutInfo } from "../util/constants";
 
 const About = () => {
   const cardRef = useRef(null);
-  let cardNumber = 1;
   const [width, setWidth] = useState(0);
 
   const rightBtn = () => {
@@ -17,7 +16,6 @@ const About = () => {
   const disableTouch = (e) => {
     e.preventDefault();
   };
-  console.log(width);
 
   if (width >= 4410) {
     setWidth(0);
@@ -51,7 +49,7 @@ const About = () => {
           onTouchStart={disableTouch}
           onTouchMove={disableTouch}
           onTouchEnd={disableTouch}
-          className={`grid touch-none overflow-hidden grid-flow-col auto-cols-[100%] justify-between overflow-x-auto`}
+          className={`grid !touch-none overflow-hidden grid-flow-col auto-cols-[100%] justify-between overflow-x-auto`}
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -62,7 +60,7 @@ const About = () => {
               <li
                 key={idx}
                 style={{ transform: `translateX(-${width}px)` }}
-                className="touch-none transition-transform duration-500"
+                className="!touch-none transition-transform duration-500"
                 ref={cardRef}
               >
                 <h3 className={`${style.h3} mb-5`}>{i.title}</h3>
