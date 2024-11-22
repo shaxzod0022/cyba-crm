@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Bar, Logo } from "../assets";
 import { style } from "../util/styles";
 import { navbarLink } from "../util/constants";
 import Button from "./Button";
 import SaidBar from "./SaidBar";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const pathname = useLocation();
   const [showBar, setShowBar] = useState("-right-[378px] -top-[110vh]");
   const showSaidBar = () => {
     setShowBar((prev) =>
@@ -14,6 +16,10 @@ const Navbar = () => {
         : "-right-[378px] -top-[110vh]"
     );
   };
+
+  useEffect(() => {
+    showSaidBar();
+  }, [pathname]);
 
   return (
     <div
