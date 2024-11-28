@@ -23,7 +23,7 @@ const Head = () => {
         <div className={`${style.f} sm:gap-5 gap-2`}>
           <Button title={"Try it for FREE"} btnClass={``} />
           <button
-            className={`${style.f} sm:text-[1rem] text-[14px] sm:gap-3 gap-1 transition hover:scale-110 text-blue font-[500]`}
+            className={`${style.f} sm:text-[1rem] text-[14px] sm:gap-3 gap-1 transition active:scale-100 hover:scale-110 text-blue font-[500]`}
           >
             <img className="sm:w-[46px] w-[35px] " src={BtnPlay} alt="" />
             <span>Watch Demo</span>

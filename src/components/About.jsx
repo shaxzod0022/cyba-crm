@@ -11,13 +11,14 @@ const About = () => {
     if (cardRef.current) {
       setWidth((i) => (i += cardRef.current.offsetWidth));
     }
+    console.log(cardRef.current.offsetWidth * aboutInfo.length);
   };
 
   const disableTouch = (e) => {
     e.preventDefault();
   };
 
-  if (width >= 4410) {
+  if (width >= 4053) {
     setWidth(0);
   }
 
